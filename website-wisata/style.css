@@ -1,0 +1,134 @@
+/* Styling Umum */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #004d40; /* Hijau Tua */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+/* Styling Tabel Utama (Layout) */
+.layout-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* Header */
+.header {
+    background-color: #009688; /* Biru Tosca */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sidebar (Kolom Kiri) */
+.sidebar {
+    width: 25%;
+    background-color: #e0f2f1; /* Hijau Muda */
+    padding: 20px;
+    vertical-align: top;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.promo-img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #004d40;
+    margin-top: 15px;
+}
+
+.slogan {
+    font-style: italic;
+    color: #004d40;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Konten Utama (Kolom Kanan) */
+.main-content {
+    width: 75%;
+    padding: 20px 40px;
+    vertical-align: top;
+}
+
+.main-img {
+    width: 100%;
+    max-width: 400px; /* Batasi lebar gambar agar tidak terlalu besar */
+    height: auto;
+    border: 3px solid #009688;
+    margin: 10px 0;
+    display: block;
+}
+
+/* Tabel Informasi Detail */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.info-table th, .info-table td {
+    border: 1px solid #b2dfdb;
+    padding: 8px;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: #009688;
+    color: white;
+}
+
+/* Tombol */
+.button {
+    display: inline-block;
+    background-color: #ff9800; /* Oranye */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e65100;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8em;
+}

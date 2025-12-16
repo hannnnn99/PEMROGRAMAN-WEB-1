@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>List dengan Multi Level</title>
+    <style>
+        /* Gaya CSS untuk mengatur jenis penomoran agar sesuai dengan gambar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Tingkat 1: Penomoran Angka (1., 2.) */
+        ol {
+            list-style-type: decimal;
+            padding-left: 20px; /* Atur jarak kiri */
+        }
+        
+        /* Tingkat 2A: Penomoran Huruf Kapital (A., B., C.) */
+        .level-alpha > li > ol {
+            list-style-type: upper-alpha;
+        }
+        
+        /* Tingkat 2B: Penomoran Huruf Kecil (a., b., c.) */
+        .level-lower-alpha > li > ol {
+            list-style-type: lower-alpha;
+        }
+
+        /* Tingkat 3A: Penomoran Romawi Kecil (i., ii., iii.) */
+        .level-roman > li > ol {
+            list-style-type: lower-roman;
+        }
+
+        /* Tingkat 3B: Tanda Kotak Hitam/Disc (■) */
+        .disc-style {
+            list-style-type: disc;
+        }
+        
+        /* Tingkat 3C: Tanda Lingkaran Kosong/Circle (○) */
+        .circle-style {
+            list-style-type: circle;
+        }
+
+        /* Reset padding default untuk ul/ol di tingkat yang lebih dalam */
+        ul, ol {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Komponen yang membangun sistem komputer</h2>
+
+    <ol>
+        <li>Hardware
+            <ol class="level-alpha">
+                <li>Input Device
+                    <ul class="disc-style">
+                        <li>Mouse</li>
+                        <li>Keyboard</li>
+                        <li>Joystick</li>
+                    </ul>
+                </li>
+                <li>Output Device
+                    <ol class="level-roman">
+                        <li>Monitor</li>
+                        <li>Printer</li>
+                        <li>Speaker</li>
+                    </ol>
+                </li>
+                <li>Process
+                    <ul class="circle-style">
+                        <li>Central Processing Unit</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+
+        <li>Software
+            <ol class="level-lower-alpha">
+                <li>Operating System
+                    <ul class="circle-style">
+                        <li>Windows</li>
+                        <li>Unix</li>
+                        <li>Linux</li>
+                    </ul>
+                </li>
+                <li>Programming Language
+                    <ul class="disc-style">
+                        <li>Delphi</li>
+                        <li>Cobol</li>
+                        <li>RPG</li>
+                    </ul>
+                </li>
+                <li>Utility Program</li>
+            </ol>
+        </li>
+    </ol>
+
+</body>
+</html>

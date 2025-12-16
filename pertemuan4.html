@@ -1,0 +1,77 @@
+<!DOCTYPE html>  
+<html>  
+<head>
+    <title>Kontrol Video Lanjutan</title>
+    <style>
+        /* CSS untuk tata letak tombol di tengah */
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>  
+ 
+<div class="container">  
+  <button onclick="tekanPause()">Play/Pause</button>  
+  <button onclick="menjadiBig()">Big</button> 
+  <button onclick="menjadiSmall()">Small</button> 
+  <button onclick="menjadiNormal()">Normal</button> 
+  <br><br> 
+  
+  <video id="videoku" width="430" controls> 
+    <source src="videoplayback.mp4" type="video/mp4"> 
+    
+    Browser anda tidak support video HTML 5. 
+  </video> 
+</div>  
+ 
+<script>  
+    // Variabel global untuk elemen video
+    var VideoAku = document.getElementById("videoku"); 
+    
+    // Ukuran normal awal video
+    var ukuranNormal = 430;
+
+    // Fungsi untuk Play/Pause
+    function tekanPause() {  
+      if (VideoAku.paused) {
+        VideoAku.play(); 
+      } else {
+        VideoAku.pause();  
+      }
+    }  
+    
+    // Fungsi untuk memperbesar video (misal: 560px)
+    function menjadiBig() {  
+      VideoAku.width = 560;  
+    }  
+    
+    // Fungsi untuk memperkecil video (misal: 320px)
+    function menjadiSmall() {  
+      VideoAku.width = 320;  
+    }  
+    
+    // Fungsi untuk ukuran normal (kembali ke ukuran awal)
+    function menjadiNormal() {  
+      VideoAku.width = ukuranNormal;  
+    }  
+</script>  
+</body>  
+</html>

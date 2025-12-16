@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Form Registrasi</title>
+    <style>
+        /* Styling CSS untuk layout dan tampilan */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+            width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #800080; /* Warna Ungu untuk Free Registration */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: flex-start;
+        }
+
+        .label-column {
+            width: 150px; 
+            text-align: left;
+            padding-right: 10px;
+            padding-top: 3px;
+        }
+
+        .input-column {
+            flex-grow: 1;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: calc(100% - 4px);
+            padding: 2px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 50px;
+        }
+
+        .date-input input[type="text"] {
+            width: 40px; /* Lebar kecil untuk Tgl Lahir */
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        .date-input span {
+            margin-right: 5px;
+        }
+        
+        .checkbox-group div, .radio-group label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+            margin-left: 150px; 
+        }
+
+        .button-group input {
+            padding: 5px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Free Registration</h2>
+    <form action="#" method="post">
+
+        <div class="form-group">
+            <div class="label-column"><label for="nama">Nama :</label></div>
+            <div class="input-column"><input type="text" id="nama" name="nama"></div>
+        </div>
+
+        <div class="form-group">
+            <div class="label-column"><label>Tgl Lahir :</label></div>
+            <div class="input-column date-input">
+                <input type="text" name="tgl_lahir_day" maxlength="2" placeholder=""> /
+                <input type="text" name="tgl_lahir_month" maxlength="2" placeholder=""> /
+                <input type="text" name="tgl_lahir_year" maxlength="4" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="label-column"><label for="alamat">Alamat :</label></div>
+            <div class="input-column"><textarea id="alamat" name="alamat"></textarea></div>
+        </div>
+
+        <div class="form-group">
+            <div class="label-column"><label for="kota">Kota :</label></div>
+            <div class="input-column"><input type="text" id="kota" name="kota"></div>
+        </div>
+
+        <div class="form-group">
+            <div class="label-column"><label for="pekerjaan">Pekerjaan :</label></div>
+            <div class="input-column">
+                <select id="pekerjaan" name="pekerjaan">
+                    <option value="tani">Tani</option>
+                    <option value="pegawai">Pegawai</option>
+                    <option value="wiraswasta">Wiraswasta</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="label-column">Jenis Kelamin :</div>
+            <div class="input-column radio-group">
+                <label><input type="radio" name="jenis_kelamin" value="laki-laki" checked> Laki-Laki</label>
+                <label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="label-column">Hobby :</div>
+            <div class="input-column checkbox-group">
+                <div><input type="checkbox" id="hobby_reading" name="hobby[]" value="reading"><label for="hobby_reading">Reading</label></div>
+                <div><input type="checkbox" id="hobby_sport" name="hobby[]" value="sport"><label for="hobby_sport">Sport</label></div>
+                <div><input type="checkbox" id="hobby_singing" name="hobby[]" value="singing"><label for="hobby_singing">Singing</label></div>
+                <div><input type="checkbox" id="hobby_traveling" name="hobby[]" value="traveling"><label for="hobby_traveling">Traveling</label></div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <input type="submit" value="Kirim"> 
+            <input type="reset" value="Cancel">
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

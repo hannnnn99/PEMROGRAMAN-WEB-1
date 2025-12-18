@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Trapesium</title>
+</head>
+<body>
+
+<h2>Program Luas Trapesium</h2>
+
+<!-- FORM -->
+<form name="trapesium">
+    Garis Atas (Cm)  :
+    <input type="number" name="atas"><br><br>
+
+    Garis Bawah (Cm):
+    <input type="number" name="bawah"><br><br>
+
+    Tinggi (Cm)     :
+    <input type="number" name="tinggi"><br><br>
+
+    <button type="button" onclick="hitung()">Hitung</button>
+</form>
+
+<script>
+    // ALERT
+    alert("Selamat datang di Program Luas Trapesium");
+
+    function hitung() {
+
+        // CONFIRM
+        var yakin = confirm("Apakah Anda ingin menghitung luas trapesium?");
+        if (!yakin) {
+            alert("Perhitungan dibatalkan");
+            return;
+        }
+
+        // AMBIL DATA DARI FORM
+        var atas = document.trapesium.atas.value;
+        var bawah = document.trapesium.bawah.value;
+        var tinggi = document.trapesium.tinggi.value;
+
+        // PROMPT (opsional tambahan)
+        var nama = prompt("Masukkan nama Anda:", "User");
+
+        // PROSES HITUNG
+        var luas = (parseFloat(atas) + parseFloat(bawah)) * parseFloat(tinggi) / 2;
+
+        // OUTPUT
+        alert(
+            "Halo " + nama + "\n" +
+            "Garis Atas   : " + atas + " Cm\n" +
+            "Garis Bawah  : " + bawah + " Cm\n" +
+            "Tinggi       : " + tinggi + " Cm\n" +
+            "-----------------------\n" +
+            "Luas Trapesium = " + luas + " Cm2"
+        );
+    }
+</script>
+
+</body>
+</html>

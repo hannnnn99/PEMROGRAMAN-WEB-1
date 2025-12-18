@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Sederhana</title>
+
+    <script>
+        function hitung() {
+            var nilai1 = parseFloat(document.kalkulator.nilai1.value);
+            var nilai2 = parseFloat(document.kalkulator.nilai2.value);
+            var operator = document.kalkulator.operator.value;
+            var hasil;
+
+            if (operator == "+") {
+                hasil = nilai1 + nilai2;
+            } else if (operator == "-") {
+                hasil = nilai1 - nilai2;
+            } else if (operator == "*") {
+                hasil = nilai1 * nilai2;
+            } else if (operator == "/") {
+                hasil = nilai1 / nilai2;
+            }
+
+            alert("Hasil = " + hasil);
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Kalkulator Sederhana</h2>
+<p>Selamat Mencoba</p>
+
+<form name="kalkulator">
+    Nilai I :
+    <input type="number" name="nilai1"><br><br>
+
+    Operator :
+    <select name="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select><br><br>
+
+    Nilai II :
+    <input type="number" name="nilai2"><br><br>
+
+    <input type="button" value="Submit" onclick="hitung()">
+</form>
+
+<br>
+<p>Created by Raihan</p>
+
+</body>
+</html>

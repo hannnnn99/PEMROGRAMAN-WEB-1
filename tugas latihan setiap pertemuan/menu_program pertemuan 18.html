@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Program</title>
+</head>
+<body>
+
+<h2>C. Soal Latihan / Tugas</h2>
+
+<script>
+    // ===== FUNCTION KALKULATOR =====
+    function kalkulator() {
+        var a = parseFloat(prompt("Masukkan Nilai I:"));
+        var b = parseFloat(prompt("Masukkan Nilai II:"));
+        var op = prompt("Masukkan Operator (+, -, *, /):");
+
+        var hasil;
+        if (op == "+") hasil = a + b;
+        else if (op == "-") hasil = a - b;
+        else if (op == "*") hasil = a * b;
+        else if (op == "/") hasil = a / b;
+        else {
+            alert("Operator tidak valid");
+            return;
+        }
+
+        document.write("<h3>Hasil Kalkulator</h3>");
+        document.write(a + " " + op + " " + b + " = " + hasil);
+    }
+
+    // ===== FUNCTION LUAS TRAPESIUM =====
+    function luasTrapesium() {
+        var atas = parseFloat(prompt("Masukkan Garis Atas:"));
+        var bawah = parseFloat(prompt("Masukkan Garis Bawah:"));
+        var tinggi = parseFloat(prompt("Masukkan Tinggi:"));
+
+        var luas = (atas + bawah) * tinggi / 2;
+
+        document.write("<h3>Luas Trapesium</h3>");
+        document.write("Garis Atas : " + atas + "<br>");
+        document.write("Garis Bawah : " + bawah + "<br>");
+        document.write("Tinggi : " + tinggi + "<br>");
+        document.write("Luas = " + luas);
+    }
+
+    // ===== FUNCTION DERET BILANGAN =====
+    function deretBilangan() {
+        var awal = parseInt(prompt("Masukkan Nilai Awal:"));
+        var akhir = parseInt(prompt("Masukkan Nilai Akhir:"));
+
+        var deret = "";
+        var jumlah = 0;
+        var total = 0;
+
+        for (var i = awal; i <= akhir; i++) {
+            if (i % 2 == 0 && i % 3 == 0) {
+                deret += i + " ";
+                jumlah++;
+                total += i;
+            }
+        }
+
+        document.write("<h3>Deret Bilangan</h3>");
+        document.write("Nilai Awal : " + awal + "<br>");
+        document.write("Nilai Akhir : " + akhir + "<br><br>");
+        document.write("Deret : " + deret + "<br>");
+        document.write("Jumlah bilangan : " + jumlah + "<br>");
+        document.write("Jumlah nilai : " + total);
+    }
+
+    // ===== MENU PILIHAN =====
+    var pilihan = prompt(
+        "Menu Pilihan:\n" +
+        "1. Menghitung Kalkulator\n" +
+        "2. Menghitung Luas Trapesium\n" +
+        "3. Menghitung Deret\n\n" +
+        "Pilihan Anda:"
+    );
+
+    if (pilihan == "1") {
+        kalkulator();
+    } else if (pilihan == "2") {
+        luasTrapesium();
+    } else if (pilihan == "3") {
+        deretBilangan();
+    } else {
+        alert("Pilihan tidak tersedia");
+    }
+</script>
+
+</body>
+</html>

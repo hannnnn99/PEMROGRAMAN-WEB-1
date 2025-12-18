@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Deret Bilangan Genap</title>
+</head>
+<body>
+
+<h2>C. Soal Latihan / Tugas</h2>
+
+<script>
+    // Input menggunakan prompt
+    var awal = parseInt(prompt("Masukkan Nilai Awal:"));
+    var akhir = parseInt(prompt("Masukkan Nilai Akhir:"));
+
+    var deret = "";
+    var jumlahBilangan = 0;
+    var jumlahNilai = 0;
+
+    // Proses perulangan
+    for (var i = awal; i <= akhir; i++) {
+        if (i % 2 == 0 && i % 3 == 0) {
+            deret += i + " ";
+            jumlahBilangan++;
+            jumlahNilai += i;
+        }
+    }
+
+    // Output ke halaman
+    document.write("<b>Nilai Awal :</b> " + awal + "<br>");
+    document.write("<b>Nilai Akhir :</b> " + akhir + "<br><br>");
+
+    document.write("<b>Deret yang tampil :</b> " + deret + "<br><br>");
+    document.write("<b>Jumlah deret bilangan :</b> " + jumlahBilangan + " bilangan<br>");
+    document.write("<b>Jumlah nilai bilangan tersebut :</b> " + jumlahNilai);
+</script>
+
+</body>
+</html>
